@@ -3,14 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:font-family="http://schemas.android.com/apk/res-auto"
     tools:context=".InsertarRecetaFragment"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la receta"
+        />
 
     <EditText
         android:id="@+id/nombre"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre de la receta"/>
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/seleccionarFoto"

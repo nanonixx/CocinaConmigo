@@ -19,4 +19,24 @@
         android:name="com.puig.proyecto.InsertarRecetaFragment"
         android:label="fragment_insertar_receta"
         tools:layout="@layout/fragment_insertar_receta" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.puig.proyecto.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.puig.proyecto.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.puig.proyecto.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.puig.proyecto.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>

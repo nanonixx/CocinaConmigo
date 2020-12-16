@@ -8,10 +8,12 @@ import androidx.room.Insert;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Receta.class}, version = 1)
+@Database(entities = {Receta.class}, version = 1, exportSchema = false)
 public abstract class AppBaseDeDatos extends RoomDatabase {
 
     private static volatile AppBaseDeDatos INSTANCE;
+
+    public abstract AppDao obtenerAppDao();
 
     public static AppBaseDeDatos getInstance(final Context context){
         if (INSTANCE == null){
@@ -27,9 +29,11 @@ public abstract class AppBaseDeDatos extends RoomDatabase {
     }
 
     @Dao
-    abstract class AppDao{
+    interface AppDao{
         @Insert
-        abstract void insertarReceta(Receta receta);
+        void insertarReceta(Receta receta);
+
+
     }
 
 

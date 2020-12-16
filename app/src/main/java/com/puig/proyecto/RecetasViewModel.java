@@ -9,11 +9,13 @@ import androidx.lifecycle.MutableLiveData;
 
 public class RecetasViewModel extends AndroidViewModel {
 
+    private final RecetaStorage recetaStorage;
     MutableLiveData<Uri> imagenSeleccionada = new MutableLiveData<>();
 
 
     public RecetasViewModel(@NonNull Application application) {
         super(application);
+        recetaStorage = new RecetaStorage(application);
     }
 
     void establecerImagenSeleccionada(Uri uri){
@@ -21,4 +23,7 @@ public class RecetasViewModel extends AndroidViewModel {
     }
 
 
+    public void insertar(String nombre, String imagenSeleccionada) {
+        recetaStorage.insertar(nombre, imagenSeleccionada);
+    }
 }

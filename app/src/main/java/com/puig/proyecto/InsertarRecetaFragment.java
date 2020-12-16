@@ -10,6 +10,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +30,7 @@ public class InsertarRecetaFragment extends Fragment {
 
     private FragmentInsertarRecetaBinding binding;
     private RecetasViewModel recetasViewModel;
+    Uri imagenSeleccionada;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,8 +44,9 @@ public class InsertarRecetaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
+        NavController navController = Navigation.findNavController(view);
 
-        binding.seleccionarFoto.setOnClickListener(new View.OnClickListener() {
+        binding.previsualizarFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (checkSelfPermission(requireContext(), READ_EXTERNAL_STORAGE) == PERMISSION_GRANTED) {
@@ -54,13 +58,23 @@ public class InsertarRecetaFragment extends Fragment {
         });
 
         recetasViewModel.imagenSeleccionada.observe(getViewLifecycleOwner(), uri -> {
-            Glide.with(requireView()).load(uri).into(binding.previsualizarFoto);
+            if (uri != null) {
+                imagenSeleccionada = uri;
+                Glide.with(requireView()).load(uri).into(binding.previsualizarFoto);
+            }
+        });
+
+        binding.insertar.setOnClickListener(v -> {
+            String nombre = binding.nombre.getText().toString();
+
+           recetasViewModel.insertar(nombre, imagenSeleccionada.toString());
+           navController.popBackStack();
+           recetasViewModel.establecerImagenSeleccionada(null);
+
         });
 
         
 }
-
-
 
     private final ActivityResultLauncher<String> lanzadorPermisos =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {

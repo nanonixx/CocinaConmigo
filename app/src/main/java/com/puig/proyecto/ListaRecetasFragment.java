@@ -21,7 +21,6 @@ public class ListaRecetasFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return (binding = FragmentListaRecetasBinding.inflate(inflater, container, false)).getRoot();
     }
 
@@ -37,6 +36,7 @@ public class ListaRecetasFragment extends Fragment {
                 navController.navigate(R.id.action_listaRecetasFragment_to_insertarRecetaFragment);
             }
         });
+
 
 
     }

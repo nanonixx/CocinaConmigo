@@ -69,11 +69,11 @@ public class ListaRecetasFragment extends Fragment {
         @Override
         public void onBindViewHolder(@NonNull RecetaViewHolder holder, int position) {
 
-//            Receta Receta = RecetaList.get(position);
+            Receta receta = RecetaList.get(position);
 //
-//            holder.binding.nombre.setText(Receta.nombre);
-//            holder.binding.tipos.setText(Receta.tipos);
-//            holder.binding.numpok.setText(Receta.numpokedex);
+            holder.binding.recetaNombre.setText(receta.nombreReceta);
+//           holder.binding.tipos.setText(receta.tipos);
+//           recetasViewModel.establecerImagenSeleccionada(uri));
 //
 //            holder.itemView.setOnClickListener(new View.OnClickListener(){
 //                @Override

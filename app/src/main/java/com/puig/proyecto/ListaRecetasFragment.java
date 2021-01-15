@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.puig.proyecto.databinding.ActivityBottomBinding;
 import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.puig.proyecto.databinding.ViewholderRecetaBinding;
 
@@ -23,6 +25,12 @@ public class ListaRecetasFragment extends Fragment {
 
     private FragmentListaRecetasBinding binding;
     private RecetasViewModel recetasViewModel;
+
+    ActivityBottomBinding ABbinding;
+
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto</string>
+    <string name="app_name">Cocina Conmigo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom">MainActivity</string>
@@ -8,4 +8,7 @@
     <string name="title_saved">guardados</string>
     <string name="title_history">historial</string>
     <string name="title_account">mi cuenta</string>
+
+    <string name="keywords">Palabras clave</string>
+    <string name="ing">Ingredientes</string>
 </resources>

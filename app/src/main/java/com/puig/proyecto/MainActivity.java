@@ -9,6 +9,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.puig.proyecto.databinding.ActivityMainBinding;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
+//        Toolbar toolbar = findViewById(R.id.toolbar);
 
     }
 

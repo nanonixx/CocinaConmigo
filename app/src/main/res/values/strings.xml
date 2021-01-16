@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Cocina Conmigo</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="xex">Ejemplo</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom">MainActivity</string>
+
     <string name="title_home">inicio</string>
     <string name="title_search">explorar</string>
     <string name="title_saved">guardados</string>

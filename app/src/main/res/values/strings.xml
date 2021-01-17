@@ -12,5 +12,58 @@
     <string name="title_account">mi cuenta</string>
 
     <string name="keywords">Palabras clave</string>
-    <string name="ing">Ingredientes</string>
+    <string name="ings">Ingredientes</string>
+    <string name="diff">Dificultad</string>
+    <string name="maxtime">Tiempo máximo</string>
+    <string name="comma">(Separado por comas)</string>
+    <string name="min">(min)</string>
+    <string name="veg">Vegano</string>
+    <string name="cel">Sin gluten</string>
+    <string name="search">Buscar</string>
+
+    <string name="recipeName">Nombre de la receta</string>
+    <string name="addphoto">Añadir Imagen</string>
+    <string name="ing">ingrediente</string>
+    <string name="adding">añadir ingrediente</string>
+    <string name="time">Tiempo de preparación</string>
+    <string name="pe">Número de personas</string>
+    <string name="share">Compartir</string>
+    <string name="del">Eliminar</string>
+    <string name="logoff">cerrar sesión</string>
+
+
+    <string name="editProfile">Editar foto de perfil</string>
+    <string name="drafts">Mis borradores</string>
+    <string name="vinc">Vincular cuenta</string>
+    <string name="fb">Vincular con Facebook</string>
+    <string name="tw">Vincular con Twitter</string>
+    <string name="ig">Vincular con Instagram</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="signup">Registrarse</string>
+    <string name="notlogged">No has iniciado sesión</string>
+    <string name="results">Resultados que coinciden con la búsqueda:</string>
+    <string name="ps"> personas</string>
+    <string name="mn"> min</string>
+
+
+    <string name="rate">valorar</string>
+    <string name="remember">recordar contraseña</string>
+    <string name="email">email o nombre de usuario</string>
+    <string name="passwd">contraseña</string>
+    <string name="googlelogin">Iniciar sesión con Google</string>
+    <string name="upload">Subir</string>
+    <string name="recipes">Recetas</string>
+    <string name="sort">Ordenar por:</string>
+    <string name="pop">Popularidad</string>
+    <string name="rat">Valoración</string>
+    <string name="time2">Tiempo</string>
+
+    <string name="recipe">Receta</string>
+    <string name="ratethis">Valora esta receta</string>
+    <string name="Rating">Valorar</string>
+    <string name="bookmark">Recetas guardadas</string>
+    <string name="history">Últimas recetas vistas</string>
+
+
+
 </resources>

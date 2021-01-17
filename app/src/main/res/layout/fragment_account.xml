@@ -54,7 +54,7 @@
             android:textColor="#1A8F88"
             app:layout_constraintLeft_toRightOf="@id/userPic"
             app:layout_constraintTop_toBottomOf="@id/username"
-            android:text="@string/xex" />
+            android:text="@string/logoff" />
 
         <ImageView
             android:layout_width="17dp"
@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userinfo"
-        android:text="@string/xex"
+        android:text="@string/editProfile"
         />
 
     <TextView
@@ -88,13 +88,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editPhoto"
-        android:text="@string/xex"
+        android:text="@string/drafts"
         />
 
     <TextView
         android:id="@+id/title"
         style="@style/textStyle"
-        android:text="@string/xex"
+        android:text="@string/vinc"
         android:layout_margin="20dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
-        android:text="@string/xex"
+        android:text="@string/fb"
         />
 
     <TextView
@@ -120,7 +120,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/facebook"
-        android:text="@string/xex"
+        android:text="@string/tw"
         />
 
     <TextView
@@ -130,7 +130,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/twitter"
-        android:text="@string/xex"
+        android:text="@string/ig"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

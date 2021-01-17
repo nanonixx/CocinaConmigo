@@ -41,7 +41,7 @@
         android:id="@+id/ingredient"
         style="@style/textStyle"
         android:layout_width="wrap_content"
-        android:text="@string/ing"
+        android:text="@string/ings"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cuadrito" />
 
@@ -53,7 +53,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
-        android:text="@string/xex"
+        android:text="@string/comma"
         android:textColor="#A5A5A5"
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@id/cuadrito2"
@@ -78,7 +78,7 @@
     <TextView
         android:id="@+id/diff"
         style="@style/textStyle"
-        android:text="@string/xex"
+        android:text="@string/diff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cuadrito2" />
 
@@ -95,7 +95,7 @@
     <TextView
         android:id="@+id/time"
         style="@style/textStyle"
-        android:text="@string/xex"
+        android:text="@string/time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ratingBar" />
 
@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginStart="30dp"
-        android:text="@string/xex"
+        android:text="@string/veg"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text" />
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="13dp"
-        android:text="@string/xex"
+        android:text="@string/cel"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxVegan" />
@@ -167,7 +167,7 @@
         android:background="@drawable/ic_button2"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="25dp"
-        android:text="@string/xex"
+        android:text="@string/search"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/checkBoxGluten" />
 

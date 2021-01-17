@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     xmlns:font-family="http://schemas.android.com/apk/res-auto"
     tools:context=".InsertarRecetaFragment"
     android:orientation="vertical">
+
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -37,25 +43,25 @@
             font-family:layout_constraintStart_toStartOf="parent"
             font-family:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/insertar"
+        <TextView
+            android:id="@+id/insertText"
             android:layout_width="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_height="40dp"
-            android:background="@drawable/ic_button2"
-            android:text="INSERTAR RECETA"
+            android:layout_height="wrap_content"
+            style="@style/textStyle"
+            android:text="@string/xex"
             font-family:layout_constraintEnd_toEndOf="parent"
             font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
             font-family:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/ic_delete"
             font-family:layout_constraintEnd_toEndOf="parent"
             font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
-            font-family:layout_constraintTop_toBottomOf="@+id/insertar" />
+            font-family:layout_constraintTop_toBottomOf="@+id/insertText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -86,10 +92,32 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/xex"
+        android:textColor="@color/teal_700"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         style="@style/textStyle"
         android:text="@string/xex"
         />
 
 
+    <Button
+        android:id="@+id/insertar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/ic_button2"
+        android:text="INSERTAR RECETA"
+        font-family:layout_constraintEnd_toEndOf="parent"
+        font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
+        font-family:layout_constraintTop_toTopOf="parent" />
+
+</ScrollView>
 
 </LinearLayout>
+

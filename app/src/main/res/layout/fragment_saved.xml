@@ -12,6 +12,6 @@
         android:layout_marginStart="20dp"
         android:textSize="18sp"
         android:textColor="@color/black"
-        android:text="@string/xex" />
+        android:text="@string/bookmark" />
 
 </FrameLayout>

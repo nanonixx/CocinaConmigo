@@ -44,6 +44,16 @@
         android:name="com.puig.proyecto.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/draftsFragment"
+        android:name="com.puig.proyecto.draftsFragment"
+        android:label="fragment_drafts"
+        tools:layout="@layout/fragment_drafts" />
+    <fragment
+        android:id="@+id/recetaFragment"
+        android:name="com.puig.proyecto.RecetaFragment"
+        android:label="fragment_receta"
+        tools:layout="@layout/fragment_receta" />
 
 
 </navigation>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/recipePicture"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/xex"
+        app:layout_constraintLeft_toRightOf="@id/recipePicture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/recipePicture"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ic_veg_cel"
+        app:layout_constraintStart_toEndOf="@+id/rating"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:contentDescription="@string/xex" />
+
+    <ImageView
+        android:id="@+id/crono"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_cronotimer"
+        app:layout_constraintStart_toEndOf="@+id/recipePicture"
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        android:contentDescription="@string/xex" />
+
+    <TextView
+        android:id="@+id/minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="75'"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/crono"
+        app:layout_constraintTop_toBottomOf="@id/rating" />
+
+    <ImageView
+        android:id="@+id/people"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_person"
+        app:layout_constraintStart_toEndOf="@+id/minutes"
+        app:layout_constraintTop_toBottomOf="@+id/rating"
+        android:contentDescription="@string/xex" />
+
+    <TextView
+        android:id="@+id/numofpeople"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="4p"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/people"
+        app:layout_constraintTop_toBottomOf="@id/rating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

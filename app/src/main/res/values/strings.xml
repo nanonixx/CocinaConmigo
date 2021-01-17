@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Cocina Conmigo</string>
 
-    <string name="xex">Ejemplo</string>
+    <string name="xex">Texto de ejemplo</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_bottom">MainActivity</string>
 

@@ -10,24 +10,86 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nombre de la receta"
+        style="@style/textStyle"
+        android:layout_marginTop="20dp"
+        android:text="@string/xex"
         />
 
     <EditText
+        android:background="@drawable/ic_textbar"
+        android:layout_margin="10dp"
         android:id="@+id/nombre"
+        android:hint="    texto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <ImageView
-        android:id="@+id/previsualizarFoto"
-        android:layout_width="200dp"
-        android:src="@drawable/ic_baseline_add_a_photo_24"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"/>
-
-    <Button
-        android:id="@+id/insertar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:text="INSERTAR RECETA" />
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/previsualizarFoto"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_addpic"
+            font-family:layout_constraintStart_toStartOf="parent"
+            font-family:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/insertar"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_button2"
+            android:text="INSERTAR RECETA"
+            font-family:layout_constraintEnd_toEndOf="parent"
+            font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
+            font-family:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_delete"
+            font-family:layout_constraintEnd_toEndOf="parent"
+            font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
+            font-family:layout_constraintTop_toBottomOf="@+id/insertar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/xex"
+        />
+
+
+    <EditText
+        android:background="@drawable/ic_textbar"
+        android:layout_margin="10dp"
+        android:id="@+id/ing1"
+        android:hint="    texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:background="@drawable/ic_textbar"
+        android:layout_margin="10dp"
+        android:id="@+id/ing2"
+        android:hint="    texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/xex"
+        />
+
+
+
 </LinearLayout>

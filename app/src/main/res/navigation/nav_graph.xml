@@ -39,4 +39,11 @@
         android:name="com.puig.proyecto.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.puig.proyecto.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+
+
 </navigation>

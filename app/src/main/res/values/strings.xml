@@ -44,6 +44,7 @@
     <string name="results">Resultados que coinciden con la búsqueda:</string>
     <string name="ps"> personas</string>
     <string name="mn"> min</string>
+    <string name="addrecipe">Añadir receta</string>
 
 
     <string name="rate">valorar</string>
@@ -64,5 +65,10 @@
     <string name="bookmark">Recetas guardadas</string>
     <string name="history">Últimas recetas vistas</string>
 
+
+    <string name="steps">Pasos a seguir</string>
+    <string name="op">Receta de </string>
+
+<!--    <string name=""></string>-->
 
 </resources>

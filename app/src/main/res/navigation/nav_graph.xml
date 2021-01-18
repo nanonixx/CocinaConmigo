@@ -54,6 +54,11 @@
         android:name="com.puig.proyecto.RecetaFragment"
         android:label="fragment_receta"
         tools:layout="@layout/fragment_receta" />
+    <fragment
+        android:id="@+id/resultadosFragment"
+        android:name="com.puig.proyecto.ResultadosFragment"
+        android:label="fragment_resultados"
+        tools:layout="@layout/fragment_resultados" />
 
 
 </navigation>

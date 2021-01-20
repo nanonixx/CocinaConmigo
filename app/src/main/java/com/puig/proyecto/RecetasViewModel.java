@@ -5,7 +5,10 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+
+import java.util.List;
 
 public class RecetasViewModel extends AndroidViewModel {
 
@@ -25,5 +28,9 @@ public class RecetasViewModel extends AndroidViewModel {
 
     public void insertar(String nombre, String imagenSeleccionada) {
         recetaStorage.insertar(nombre, imagenSeleccionada);
+    }
+
+    LiveData<List<Receta>> todoRecetas(){
+        return recetaStorage.obtenerTodas();
     }
 }

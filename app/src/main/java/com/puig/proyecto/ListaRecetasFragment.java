@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -15,6 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.puig.proyecto.databinding.ActivityBottomBinding;
 import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.puig.proyecto.databinding.ViewholderRecetaBinding;
@@ -25,11 +29,6 @@ public class ListaRecetasFragment extends Fragment {
 
     private FragmentListaRecetasBinding binding;
     private RecetasViewModel recetasViewModel;
-
-    ActivityBottomBinding ABbinding;
-
-
-
 
 
     @Override
@@ -44,6 +43,17 @@ public class ListaRecetasFragment extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
+
+        RecetaAdapter recetaAdapter = new RecetaAdapter();
+
+        binding.recycler.setAdapter(recetaAdapter);
+
+        recetasViewModel.todoRecetas().observe(getViewLifecycleOwner(), new Observer<List<Receta>>() {
+            @Override
+            public void onChanged(List<Receta> recetas) {
+                recetaAdapter.setRecetaList(recetas);
+            }
+        });
 
         binding.irAInsertarReceta.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,16 +90,10 @@ public class ListaRecetasFragment extends Fragment {
             Receta receta = RecetaList.get(position);
 //
             holder.binding.recetaNombre.setText(receta.nombreReceta);
-//           holder.binding.tipos.setText(receta.tipos);
-//           recetasViewModel.establecerImagenSeleccionada(uri));
-//
-//            holder.itemView.setOnClickListener(new View.OnClickListener(){
-//                @Override
-//                public void onClick(View v) {
-//                    recetasViewModel.seleccionar(Receta);
-//                    navController.navigate(R.id.action_recyclerRecetaFragment_to_mostrarRecetaFragment);
-//                }
-//            });
+
+            Glide.with(requireView()).load(receta.imagen)
+                    .transform(new RoundedCorners(250))
+                    .into(holder.binding.recetaImage);
 
         }
 

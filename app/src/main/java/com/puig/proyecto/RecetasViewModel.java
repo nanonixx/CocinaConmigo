@@ -26,8 +26,8 @@ public class RecetasViewModel extends AndroidViewModel {
     }
 
 
-    public void insertar(String nombre, String imagenSeleccionada) {
-        recetaStorage.insertar(nombre, imagenSeleccionada);
+    public void insertar(String nombre, String imagenSeleccionada, int tiempo) {
+        recetaStorage.insertar(nombre, imagenSeleccionada, tiempo);
     }
 
     LiveData<List<Receta>> todoRecetas(){

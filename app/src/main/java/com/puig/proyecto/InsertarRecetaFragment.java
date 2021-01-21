@@ -63,8 +63,9 @@ public class InsertarRecetaFragment extends Fragment {
 
         binding.insertar.setOnClickListener(v -> {
             String nombre = binding.nombre.getText().toString();
+            int tiempo = Integer.parseInt(binding.editnum.getText().toString());
 
-           recetasViewModel.insertar(nombre, imagenSeleccionada.toString());
+           recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo);
            navController.popBackStack();
            recetasViewModel.establecerImagenSeleccionada(null);
 

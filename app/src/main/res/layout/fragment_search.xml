@@ -14,8 +14,6 @@
     tools:context=".SearchFragment">
 
 
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/editTextTextPersonName"
         style="@style/textStyle"
@@ -119,13 +117,38 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <View
+            android:id="@+id/menos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ic_menos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="67dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="@string/xex"
+            android:id="@+id/editnum"
+            android:inputType="number"
+            android:background="@drawable/ic_textbar"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/view"
+            app:layout_constraintLeft_toRightOf="@id/menos"
+            android:paddingLeft="10dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/mas"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_mas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editnum"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -134,6 +157,7 @@
     <TextView
         android:id="@+id/text"
         style="@style/textStyle"
+        android:layout_marginTop="20dp"
         android:text="@string/xex"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
@@ -147,6 +171,15 @@
         android:text="@string/veg"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+    <ImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_vegan"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/checkBoxVegan"
         app:layout_constraintTop_toBottomOf="@+id/text" />
 
     <CheckBox

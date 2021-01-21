@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav_view);
 
-//        navController = Navigation.findNavController(this,  R.id.listaRecetasFragment);
           navController = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
 
 
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
 //        Toolbar toolbar = findViewById(R.id.toolbar);
+
+
 
     }
 

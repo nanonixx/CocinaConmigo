@@ -28,8 +28,9 @@ public class Receta {
         this.celiaco = celiaco;
     }
 
-    public Receta(String nombreReceta, String imagen) {
+    public Receta(String nombreReceta, String imagen, int tiempo) {
         this.nombreReceta = nombreReceta;
+        this.tiempo = tiempo;
         this.imagen = imagen;
     }
 }

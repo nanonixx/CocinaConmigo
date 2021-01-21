@@ -45,7 +45,7 @@ public class SavedFragment extends Fragment {
         recetasViewModel.todoRecetas().observe(getViewLifecycleOwner(), new Observer<List<Receta>>() {
             @Override
             public void onChanged(List<Receta> recetas) {
-                recetasAdapter.setProductoList(recetas);
+                recetasAdapter.setRecetaList(recetas);
             }
         });
 
@@ -76,7 +76,7 @@ public class SavedFragment extends Fragment {
             return recetaList == null ? 0 : recetaList.size();
         }
 
-        public void setProductoList(List<Receta> recetaList) {
+        public void setRecetaList(List<Receta> recetaList) {
             this.recetaList = recetaList;
             notifyDataSetChanged();
         }

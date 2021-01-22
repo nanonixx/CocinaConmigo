@@ -29,6 +29,7 @@ public class ListaRecetasFragment extends Fragment {
 
     private FragmentListaRecetasBinding binding;
     private RecetasViewModel recetasViewModel;
+    private NavController navController;
 
 
     @Override
@@ -41,7 +42,7 @@ public class ListaRecetasFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        NavController navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController(view);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
 
         RecetaAdapter recetaAdapter = new RecetaAdapter();
@@ -60,7 +61,10 @@ public class ListaRecetasFragment extends Fragment {
             public void onClick(View v) {
                 navController.navigate(R.id.action_listaRecetasFragment_to_insertarRecetaFragment);
             }
+
         });
+
+
 
 
 
@@ -88,12 +92,17 @@ public class ListaRecetasFragment extends Fragment {
         public void onBindViewHolder(@NonNull RecetaViewHolder holder, int position) {
 
             Receta receta = RecetaList.get(position);
-//
+
             holder.binding.recetaNombre.setText(receta.nombreReceta);
 
-            Glide.with(requireView()).load(receta.imagen)
-                    .transform(new RoundedCorners(250))
-                    .into(holder.binding.recetaImage);
+
+            Glide.with(requireView()).load(receta.imagen).into(holder.binding.recetaImage);
+
+            holder.itemView.setOnClickListener(v -> {
+                recetasViewModel.seleccionar(receta);
+                navController.navigate(R.id.recetaFragment);
+
+            });
 
         }
 

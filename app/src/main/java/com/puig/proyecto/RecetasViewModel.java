@@ -13,7 +13,9 @@ import java.util.List;
 public class RecetasViewModel extends AndroidViewModel {
 
     private final RecetaStorage recetaStorage;
+
     MutableLiveData<Uri> imagenSeleccionada = new MutableLiveData<>();
+    MutableLiveData<Receta> recetaSeleccionada = new MutableLiveData<>();
 
 
     public RecetasViewModel(@NonNull Application application) {
@@ -28,6 +30,14 @@ public class RecetasViewModel extends AndroidViewModel {
 
     public void insertar(String nombre, String imagenSeleccionada, int tiempo) {
         recetaStorage.insertar(nombre, imagenSeleccionada, tiempo);
+    }
+
+    void seleccionar (Receta receta){
+        recetaSeleccionada.setValue(receta);
+    }
+
+    MutableLiveData<Receta> seleccionado(){
+        return recetaSeleccionada;
     }
 
     LiveData<List<Receta>> todoRecetas(){

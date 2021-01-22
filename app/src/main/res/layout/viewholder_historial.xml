@@ -6,7 +6,7 @@
     android:layout_height="wrap_content" android:layout_margin="20dp">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/recetaPicture"
         android:layout_width="69dp"
         android:layout_height="69dp"
         android:contentDescription="@string/xex"
@@ -19,10 +19,11 @@
         android:layout_height="wrap_content"
         android:text="@string/xex"
         android:textColor="@color/black"
+        android:id="@+id/nombreReceta"
         android:layout_marginStart="10dp"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView2"
+        app:layout_constraintStart_toEndOf="@id/recetaPicture"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

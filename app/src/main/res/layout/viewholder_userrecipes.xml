@@ -7,22 +7,22 @@
     android:layout_margin="20dp">
 
     <ImageView
-        android:id="@+id/recipePicture"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:id="@+id/recetaPicture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/nombreReceta"
         style="@style/textStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/xex"
-        app:layout_constraintLeft_toRightOf="@id/recipePicture"
+        app:layout_constraintLeft_toRightOf="@id/recetaPicture"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RatingBar
@@ -33,17 +33,19 @@
         android:layout_marginStart="10dp"
 
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/recipePicture"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/recetaPicture"
+        app:layout_constraintTop_toBottomOf="@+id/nombreReceta" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+
         android:layout_marginTop="15dp"
         android:background="@drawable/ic_veg_cel"
+        android:contentDescription="@string/xex"
         app:layout_constraintStart_toEndOf="@+id/rating"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:contentDescription="@string/xex" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreReceta" />
 
     <ImageView
         android:id="@+id/crono"
@@ -52,7 +54,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/ic_cronotimer"
-        app:layout_constraintStart_toEndOf="@+id/recipePicture"
+        app:layout_constraintStart_toEndOf="@+id/recetaPicture"
         app:layout_constraintTop_toBottomOf="@+id/rating"
         android:contentDescription="@string/xex" />
 

@@ -4,6 +4,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.List;
+
 @Entity
 public class Receta {
 @PrimaryKey(autoGenerate = true)
@@ -11,6 +13,10 @@ public class Receta {
 
     String nombreReceta;
     String imagen;
+//    String pasos;
+
+//    List<String> ingredientes
+//    List<String> consejos;
 
     int tiempo;
     int personas;

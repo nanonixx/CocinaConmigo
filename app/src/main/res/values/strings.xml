@@ -41,7 +41,7 @@
     <string name="login">Iniciar sesión</string>
     <string name="signup">Registrarse</string>
     <string name="notlogged">No has iniciado sesión</string>
-    <string name="results">Resultados que coinciden con la búsqueda:</string>
+    <string name="results">Resultados que coinciden con<br/> la búsqueda:</string>
     <string name="ps"> personas</string>
     <string name="mn"> min</string>
     <string name="addrecipe">Añadir receta</string>
@@ -69,6 +69,10 @@
     <string name="steps">Pasos a seguir</string>
     <string name="op">Receta de </string>
 
-    <!--    <string name=""></string>-->
+    <string name="trending">Popular ahora mismo</string>
+
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
 
 </resources>

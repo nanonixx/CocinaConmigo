@@ -17,13 +17,17 @@
 
     <TextView
         android:id="@+id/nombreReceta"
-        style="@style/textStyle"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:text="@string/xex"
+        app:layout_constraintBottom_toTopOf="@id/share"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toEndOf="@+id/imagen"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,14 +35,14 @@
         android:id="@+id/share"
         android:layout_width="85dp"
         android:layout_height="70dp"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/ic_share"
-        android:textAllCaps="false"
-        android:textSize="13sp"
         android:paddingTop="30dp"
-        android:textColor="#4A4A4A"
         android:text="@string/share"
+        android:textAllCaps="false"
+        android:textColor="#4A4A4A"
+        android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/imagen"
         app:layout_constraintTop_toBottomOf="@+id/nombreReceta" />
 

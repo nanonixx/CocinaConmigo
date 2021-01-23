@@ -64,13 +64,6 @@ public class ListaRecetasFragment extends Fragment {
 
         });
 
-
-
-
-
-
-
-
     }
 
     class RecetaAdapter extends RecyclerView.Adapter<RecetaViewHolder> {

@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Database;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Room;
@@ -74,6 +75,10 @@ public abstract class AppBaseDeDatos extends RoomDatabase {
 
         @Query("SELECT * FROM Receta")
         LiveData<List<Receta>> todasRecetas();
+
+        @Delete()
+        void eliminarReceta(Receta receta);
+
     }
 
 }

@@ -37,8 +37,8 @@
 
     <ImageView
         android:id="@+id/sharebutton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_margin="10dp"
         android:background="@drawable/share_icon"
         app:layout_constraintEnd_toStartOf="@id/bookmark"
@@ -48,8 +48,8 @@
         android:id="@+id/bookmark"
         android:layout_margin="10dp"
         android:background="@drawable/bookmark_border"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@id/imageView4" />
 

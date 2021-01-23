@@ -73,6 +73,8 @@ public class InsertarRecetaFragment extends Fragment {
            recetasViewModel.establecerImagenSeleccionada(null);
 
         });
+
+
     }
 
     private final ActivityResultLauncher<String> lanzadorGaleria =

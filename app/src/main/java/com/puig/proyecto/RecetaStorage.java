@@ -24,6 +24,12 @@ public class RecetaStorage {
         });
     }
 
+    public void eliminar(Receta receta) {
+        executor.execute(() -> {
+            appDao.eliminarReceta(receta);
+        });
+    }
+
     public LiveData<List<Receta>> obtenerTodas(){
         return appDao.todasRecetas();
     }

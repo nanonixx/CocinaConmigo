@@ -15,7 +15,10 @@
         <activity
             android:name=".BottomActivity"
             android:label="@string/title_activity_bottom" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:windowSoftInputMode="adjustNothing"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

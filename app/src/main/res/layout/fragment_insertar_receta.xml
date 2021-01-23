@@ -61,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:id="@+id/deleteButton"
             android:background="@drawable/ic_delete"
             font-family:layout_constraintEnd_toEndOf="parent"
             font-family:layout_constraintStart_toEndOf="@+id/previsualizarFoto"
@@ -283,7 +284,72 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/diff"
+        android:id="@+id/diff" />
 
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:numStars="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diff" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/steps"
+        />
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="15dp"
+        android:padding="10dp"
+        android:hint="@string/step"
+        android:gravity="start"
+        android:background="@drawable/ic_rectangle_big"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/textStyle"
+        android:text="@string/protips"/>
+
+    <EditText
+        android:background="@drawable/ic_textbar"
+        android:layout_margin="10dp"
+        android:hint="@string/protip"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:background="@drawable/ic_textbar"
+        android:layout_margin="10dp"
+        android:hint="@string/protip"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addtip"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/teal_700"
+        android:textStyle="italic"
+        />
+    
 
 
     <Button

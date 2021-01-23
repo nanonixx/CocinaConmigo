@@ -32,6 +32,10 @@ public class RecetasViewModel extends AndroidViewModel {
         recetaStorage.insertar(nombre, imagenSeleccionada, tiempo, personas);
     }
 
+    public void eliminar(Receta receta) {
+        recetaStorage.eliminar(receta);
+    }
+
     void seleccionar (Receta receta){
         recetaSeleccionada.setValue(receta);
     }

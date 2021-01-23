@@ -53,7 +53,7 @@ public class RecetaFragment extends Fragment {
         binding.sharebutton.setOnClickListener(v -> {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Mis recetingas te las envío");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Te envío la recetinga: http://bitly.com/98K8eH");
             sendIntent.setType("text/plain");
 
             Intent shareIntent = Intent.createChooser(sendIntent, null);

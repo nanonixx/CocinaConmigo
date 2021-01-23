@@ -70,12 +70,20 @@
 
 
     <string name="steps">Pasos a seguir</string>
+    <string name="step">pasos a seguir</string>
     <string name="op">Receta de </string>
 
     <string name="trending">Popular ahora mismo</string>
 
     <string name="my">Mis recetas</string>
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
+    <string name="protip">consejo</string>
+    <string name="protips">Consejos</string>
+    <string name="addtip">Añadir consejo</string>
+
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>--><!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+
 
 </resources>

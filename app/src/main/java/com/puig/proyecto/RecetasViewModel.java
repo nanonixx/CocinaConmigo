@@ -28,8 +28,8 @@ public class RecetasViewModel extends AndroidViewModel {
     }
 
 
-    public void insertar(String nombre, String imagenSeleccionada, int tiempo) {
-        recetaStorage.insertar(nombre, imagenSeleccionada, tiempo);
+    public void insertar(String nombre, String imagenSeleccionada, int tiempo, int personas) {
+        recetaStorage.insertar(nombre, imagenSeleccionada, tiempo, personas);
     }
 
     void seleccionar (Receta receta){

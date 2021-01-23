@@ -57,15 +57,18 @@ public class InsertarRecetaFragment extends Fragment {
         recetasViewModel.imagenSeleccionada.observe(getViewLifecycleOwner(), uri -> {
             if (uri != null) {
                 imagenSeleccionada = uri;
-                Glide.with(requireView()).load(uri).into(binding.previsualizarFoto);
+                Glide.with(requireView())
+                        .load(uri)
+                        .into(binding.previsualizarFoto);
             }
         });
 
         binding.insertar.setOnClickListener(v -> {
             String nombre = binding.nombre.getText().toString();
             int tiempo = Integer.parseInt(binding.editnum.getText().toString());
+            int personas = Integer.parseInt(binding.editnum2.getText().toString());
 
-           recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo);
+           recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo, personas);
            navController.popBackStack();
            recetasViewModel.establecerImagenSeleccionada(null);
 

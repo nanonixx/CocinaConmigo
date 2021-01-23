@@ -92,6 +92,16 @@
         />
 
     <TextView
+        android:id="@+id/myRecipes"
+        android:background="@drawable/ic_button2"
+        style="@style/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gotoDrafts"
+        android:text="@string/my"
+        />
+
+    <TextView
         android:id="@+id/title"
         style="@style/textStyle"
         android:text="@string/vinc"
@@ -100,7 +110,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/gotoDrafts" />
+        app:layout_constraintTop_toBottomOf="@id/myRecipes" />
 
     <TextView
         android:id="@+id/facebook"

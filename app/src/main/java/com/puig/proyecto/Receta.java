@@ -4,6 +4,9 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.puig.proyecto.ui.Ingredientes;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,10 +16,8 @@ public class Receta {
 
     String nombreReceta;
     String imagen;
-//    String pasos;
-
-//    List<String> ingredientes
-//    List<String> consejos;
+    String user;
+//    String[] ingredientes;
 
     int tiempo;
     int personas;
@@ -34,9 +35,10 @@ public class Receta {
         this.celiaco = celiaco;
     }
 
-    public Receta(String nombreReceta, String imagen, int tiempo) {
+    public Receta(String nombreReceta, String imagen, int tiempo, int personas) {
         this.nombreReceta = nombreReceta;
         this.tiempo = tiempo;
         this.imagen = imagen;
+        this.personas = personas;
     }
 }

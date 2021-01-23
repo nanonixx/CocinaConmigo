@@ -45,6 +45,8 @@
     <string name="ps"> personas</string>
     <string name="mn"> min</string>
     <string name="addrecipe">Añadir receta</string>
+    <string name="people">Número de personas</string>
+
 
 
     <string name="rate">valorar</string>
@@ -64,6 +66,7 @@
     <string name="Rating">Valorar</string>
     <string name="bookmark">Recetas guardadas</string>
     <string name="history">Últimas recetas vistas</string>
+    <string name="more">Más opciones</string>
 
 
     <string name="steps">Pasos a seguir</string>
@@ -71,7 +74,7 @@
 
     <string name="trending">Popular ahora mismo</string>
 
-<!--    <string name=""></string>-->
+    <string name="my">Mis recetas</string>
 <!--    <string name=""></string>-->
 <!--    <string name=""></string>-->
 

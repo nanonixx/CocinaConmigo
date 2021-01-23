@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentRecetaBinding;
 
 
@@ -37,7 +38,17 @@ public class RecetaFragment extends Fragment {
 
         recetasViewModel.seleccionado().observe(getViewLifecycleOwner(), receta -> {
             binding.nombrereceta.setText(receta.nombreReceta);
+            binding.minutes.setText(String.valueOf(receta.tiempo)+" minutos");
+            binding.numofpeople.setText(String.valueOf(receta.personas)+" personas");
+
+            Glide.with(requireView())
+                    .load(receta.imagen)
+                    .fitCenter()
+                    .centerCrop()
+                    .into(binding.imageView4);
         });
+
+
 
         binding.sharebutton.setOnClickListener(v -> {
             Intent sendIntent = new Intent();

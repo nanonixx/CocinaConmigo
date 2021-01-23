@@ -218,11 +218,12 @@
         android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:text="\@usuario"
         android:textColor="@color/teal_700"
         app:layout_constraintStart_toEndOf="@id/recetade"
-        app:layout_constraintTop_toBottomOf="@id/stepsList"
-        android:text="\@usuario"/>
+        app:layout_constraintTop_toBottomOf="@id/stepsList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

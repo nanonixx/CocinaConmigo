@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         style="@style/textStyle"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:text="@string/recipeName"
         />
 
@@ -115,7 +116,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/time">
 
@@ -150,7 +150,7 @@
             android:background="@drawable/ic_textbar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/menos"
-            android:paddingLeft="10dp"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
@@ -166,6 +166,123 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/people"
+        style="@style/textStyle"
+        android:text="@string/people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time">
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ic_person"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/menos2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/ic_menos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <EditText
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/editnum2"
+            android:inputType="number"
+            android:background="@drawable/ic_textbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/menos2"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/mas2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_mas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/editnum2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text"
+            style="@style/textStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/more"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <CheckBox
+            android:id="@+id/checkBoxVegan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/veg"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_vegan"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@id/checkBoxVegan"
+            app:layout_constraintTop_toBottomOf="@+id/text" />
+
+        <CheckBox
+            android:id="@+id/checkBoxGluten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/cel"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxVegan" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_gluten_free"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@id/checkBoxGluten"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxVegan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
@@ -175,6 +292,7 @@
         android:layout_marginTop="20dp"
         android:layout_height="40dp"
         android:gravity="center"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/ic_button2"
         android:text="@string/addrecipe"
         font-family:layout_constraintEnd_toEndOf="parent"

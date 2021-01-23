@@ -18,9 +18,9 @@ public class RecetaStorage {
         appDao = AppBaseDeDatos.getInstance(application).obtenerAppDao();
     }
 
-    public void insertar(String nombre, String imagenSeleccionada, int tiempo) {
+    public void insertar(String nombre, String imagenSeleccionada, int tiempo, int personas) {
         executor.execute(()->{
-            appDao.insertarReceta(new Receta(nombre, imagenSeleccionada, tiempo));
+            appDao.insertarReceta(new Receta(nombre, imagenSeleccionada, tiempo, personas));
         });
     }
 

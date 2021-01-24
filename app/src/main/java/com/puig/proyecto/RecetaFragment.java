@@ -48,6 +48,13 @@ public class RecetaFragment extends Fragment {
                     .into(binding.imageView4);
         });
 
+        binding.gotouser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_recetaFragment_to_userFragment);
+            }
+        });
+
 
 
         binding.sharebutton.setOnClickListener(v -> {

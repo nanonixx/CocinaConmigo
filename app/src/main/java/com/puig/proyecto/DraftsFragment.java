@@ -11,34 +11,33 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.puig.proyecto.databinding.FragmentSavedBinding;
-import com.puig.proyecto.databinding.ViewholderGuadadosBinding;
+import com.puig.proyecto.databinding.FragmentDraftsBinding;
+import com.puig.proyecto.databinding.ViewholderBorradoresBinding;
 
 import java.util.List;
 
 
-public class SavedFragment extends Fragment {
+public class DraftsFragment extends Fragment {
 
     private RecetasViewModel recetasViewModel;
-    private FragmentSavedBinding binding;
+    private FragmentDraftsBinding binding;
 
     NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return (binding = FragmentSavedBinding.inflate(inflater, container, false)).getRoot();
+                             Bundle DraftsInstanceState) {
+        return (binding = FragmentDraftsBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle DraftsInstanceState) {
+        super.onViewCreated(view, DraftsInstanceState);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
         navController = Navigation.findNavController(view);
 
@@ -58,18 +57,18 @@ public class SavedFragment extends Fragment {
 
     }
 
-    class RecetasAdapter extends RecyclerView.Adapter<GuardadosViewHolder> {
+    class RecetasAdapter extends RecyclerView.Adapter<BorradoresViewHolder> {
 
         List<Receta> recetaList;
 
         @NonNull
         @Override
-        public GuardadosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new GuardadosViewHolder(ViewholderGuadadosBinding.inflate(getLayoutInflater(), parent, false));
+        public BorradoresViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new BorradoresViewHolder(ViewholderBorradoresBinding.inflate(getLayoutInflater(), parent, false));
         }
 
         @Override
-        public void onBindViewHolder(@NonNull GuardadosViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull BorradoresViewHolder holder, int position) {
             Receta receta = recetaList.get(position);
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
@@ -92,10 +91,10 @@ public class SavedFragment extends Fragment {
         }
     }
 
-    static class GuardadosViewHolder extends RecyclerView.ViewHolder {
-        ViewholderGuadadosBinding binding;
+    static class BorradoresViewHolder extends RecyclerView.ViewHolder {
+        ViewholderBorradoresBinding binding;
 
-        public GuardadosViewHolder(@NonNull ViewholderGuadadosBinding binding) {
+        public BorradoresViewHolder(@NonNull ViewholderBorradoresBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }

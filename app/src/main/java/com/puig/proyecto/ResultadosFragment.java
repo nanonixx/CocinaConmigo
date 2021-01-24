@@ -26,6 +26,7 @@ public class ResultadosFragment extends Fragment {
 
     private RecetasViewModel recetasViewModel;
     private FragmentResultadosBinding binding;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +38,7 @@ public class ResultadosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle ResultadosInstanceState) {
         super.onViewCreated(view, ResultadosInstanceState);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
+        navController = Navigation.findNavController(view);
 
         ResultadosFragment.RecetasAdapter recetasAdapter = new ResultadosFragment.RecetasAdapter();
         binding.recycler.setAdapter(recetasAdapter);
@@ -67,8 +69,14 @@ public class ResultadosFragment extends Fragment {
             Receta receta = recetaList.get(position);
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
-//            holder.binding.minutes.setText(receta.tiempo);
+            holder.binding.minutes.setText(String.valueOf(receta.tiempo)+"'");
+            holder.binding.numofpeople.setText(String.valueOf(receta.personas)+"p");
             Glide.with(requireView()).load(receta.imagen).into(holder.binding.recetaPicture);
+
+            holder.binding.recetaPicture.setOnClickListener(v -> {
+                recetasViewModel.seleccionar(receta);
+                navController.navigate(R.id.recetaFragment);
+            });
         }
 
         @Override

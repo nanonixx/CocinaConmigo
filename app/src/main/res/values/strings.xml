@@ -44,7 +44,8 @@
     <string name="results">Resultados que coinciden con<br/> la búsqueda:</string>
     <string name="ps"> personas</string>
     <string name="mn"> min</string>
-    <string name="addrecipe">Añadir receta</string>
+    <string name="savetodrafts">Añadir a borradores</string>
+    <string name="addrecipe">Subir receta</string>
     <string name="people">Número de personas</string>
 
 

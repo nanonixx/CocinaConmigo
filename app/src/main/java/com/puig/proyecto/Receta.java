@@ -16,7 +16,7 @@ public class Receta {
 
     String nombreReceta;
     String imagen;
-    String user;
+    int idcreator;
 //    String[] ingredientes;
 
     int tiempo;

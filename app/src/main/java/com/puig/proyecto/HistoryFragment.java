@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDeepLinkBuilder;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,7 @@ public class HistoryFragment extends Fragment {
 
     private RecetasViewModel recetasViewModel;
     private FragmentHistoryBinding binding;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +40,7 @@ public class HistoryFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle HistoryInstanceState) {
         super.onViewCreated(view, HistoryInstanceState);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
+        navController = Navigation.findNavController(view);
 
         HistoryFragment.RecetasAdapter recetasAdapter = new HistoryFragment.RecetasAdapter();
         binding.recycler.setAdapter(recetasAdapter);
@@ -69,6 +72,11 @@ public class HistoryFragment extends Fragment {
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
             Glide.with(requireView()).load(receta.imagen).into(holder.binding.recetaPicture);
+
+            holder.itemView.setOnClickListener(v -> {
+                recetasViewModel.seleccionar(receta);
+                navController.navigate(R.id.recetaFragment);
+            });
         }
 
         @Override

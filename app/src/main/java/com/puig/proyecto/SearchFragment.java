@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.media.Rating;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,8 @@ public class SearchFragment extends Fragment {
 
     private FragmentSearchBinding binding;
 
+
+
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -32,6 +35,8 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return (binding = FragmentSearchBinding.inflate(inflater, container, false)).getRoot();
+
+
     }
 
     @Override
@@ -39,6 +44,8 @@ public class SearchFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         NavController navController = Navigation.findNavController(view);
+
+
 
         binding.searchButton.setOnClickListener(new View.OnClickListener() {
             @Override

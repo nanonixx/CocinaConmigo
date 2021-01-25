@@ -64,6 +64,11 @@ public abstract class AppBaseDeDatos extends RoomDatabase {
             appDao.insertarReceta(new Receta("Entrecot de Ternera", "file:///android_asset/entrecot.png", 15, 3, false, false));
             appDao.insertarReceta(new Receta("Ramen Miso", "file:///android_asset/ramenmiso.png", 120, 4, false, false));
             appDao.insertarReceta(new Receta("Tortilla de Espinacas", "file:///android_asset/tortilla.png", 20, 4, false, true));
+            appDao.insertarReceta(new Receta("Sandwich Mixto", "file:///android_asset/bikini.png", 5, 2, false, false));
+            appDao.insertarReceta(new Receta("Macarrones a la Carbonara", "file:///android_asset/carbonara.png", 30, 4, false, true));
+            appDao.insertarReceta(new Receta("Fideos Yakisoba con pollo", "file:///android_asset/yakisoba.png", 25, 5, false, false));
+            appDao.insertarReceta(new Receta("Katsudon", "file:///android_asset/katsudon.png", 45, 4, false, true));
+            appDao.insertarReceta(new Receta("Sushi de atún", "file:///android_asset/sushi.png", 40, 10, false, true));
         });
     }
 

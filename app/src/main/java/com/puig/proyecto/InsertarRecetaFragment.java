@@ -16,6 +16,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentInsertarRecetaBinding;
@@ -39,6 +40,11 @@ public class InsertarRecetaFragment extends Fragment {
         return (binding = FragmentInsertarRecetaBinding.inflate(inflater, container, false)).getRoot();
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+         }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -67,6 +73,13 @@ public class InsertarRecetaFragment extends Fragment {
             String nombre = binding.nombre.getText().toString();
             int tiempo = Integer.parseInt(binding.editnum.getText().toString());
             int personas = Integer.parseInt(binding.editnum2.getText().toString());
+
+            CheckBox vegan = ((CheckBox) view.findViewById(R.id.checkBoxVegan) );
+            CheckBox gluten = ((CheckBox) view.findViewById(R.id.checkBoxGluten) );
+
+            boolean isVegan = vegan.isChecked();
+            boolean isGlutenFree = gluten.isChecked();
+
 
            recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo, personas);
            navController.popBackStack();

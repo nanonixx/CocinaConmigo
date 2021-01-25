@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView android:layout_height="wrap_content"
+<com.factor.bouncy.BouncyNestedScrollView android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:recyclerview_fling_animation_size=".7"
+    app:recyclerview_overscroll_animation_size=".7"
+    app:allow_item_swipe="false"
+    app:allow_drag_reorder="true">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -379,5 +383,5 @@
 
 </LinearLayout>
 
-</ScrollView>
+</com.factor.bouncy.BouncyNestedScrollView>
 

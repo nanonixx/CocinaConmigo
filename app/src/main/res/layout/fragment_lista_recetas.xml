@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ListaRecetasFragment">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.melnykov.fab.FloatingActionButton
         android:id="@+id/irAInsertarReceta"
         android:layout_width="56dp"
         android:layout_height="wrap_content"
@@ -33,9 +33,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.factor.bouncy.BouncyRecyclerView
         android:id="@+id/recycler"
         android:layout_width="match_parent"
+        app:recyclerview_fling_animation_size=".7"
+        app:recyclerview_overscroll_animation_size=".7"
+        app:allow_item_swipe="false"
+        app:allow_drag_reorder="true"
         android:layout_margin="10dp"
         android:layout_marginBottom="50dp"
         android:layout_height="wrap_content"

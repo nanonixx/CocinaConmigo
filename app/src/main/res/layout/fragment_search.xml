@@ -8,6 +8,7 @@
     app:recyclerview_overscroll_animation_size=".7"
     app:allow_item_swipe="false"
     app:allow_drag_reorder="true"
+    android:layout_marginBottom="60dp"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
 
@@ -297,18 +298,13 @@
 
     </com.andexert.library.RippleView>
 
-<!--    <Button-->
-<!--        android:id="@+id/searchButton"-->
-<!--        android:elevation="5dp"-->
-<!--        android:layout_width="312dp"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:background="@drawable/ic_button2"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:layout_marginBottom="60dp"-->
-<!--        android:text="@string/search"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/checkBoxGluten" />-->
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

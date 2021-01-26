@@ -15,12 +15,14 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.andexert.library.RippleView;
 import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.puig.proyecto.databinding.FragmentSearchBinding;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 
 public class SearchFragment extends Fragment {
@@ -54,9 +56,9 @@ public class SearchFragment extends Fragment {
 
         NavController navController = Navigation.findNavController(view);
 
-        final RippleView rippleView = (RippleView) view.findViewById(R.id.more);
 
-        rippleView.setOnClickListener(new View.OnClickListener() {
+        Button button = view.findViewById(R.id.searchButton);
+        PushDownAnim.setPushDownAnimTo( button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_searchFragment_to_resultadosFragment);
@@ -64,11 +66,5 @@ public class SearchFragment extends Fragment {
         });
 
 
-//        binding.searchButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                navController.navigate(R.id.action_searchFragment_to_resultadosFragment);
-//            }
-//        });
     }
 }

@@ -1,7 +1,6 @@
 package com.puig.proyecto;
 
 import android.content.Context;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -51,24 +50,25 @@ public abstract class AppBaseDeDatos extends RoomDatabase {
         }
         return INSTANCE;
     }
+
     static void insertarRecetasIniciales(AppDao appDao){
         executor.execute(()->{
-            appDao.insertarReceta(new Receta("Espaguetis a la Boloñesa", "file:///android_asset/espagueti.png", 30, 3, false, false));
-            appDao.insertarReceta(new Receta("Perrito Caliente", "file:///android_asset/hotdog.png", 10, 2, false, false));
-            appDao.insertarReceta(new Receta("Mochis de Arroz", "file:///android_asset/mochi.png", 70, 4, true, true));
-            appDao.insertarReceta(new Receta("Pepinos con ajo", "file:///android_asset/pepinajo.png", 20, 2, true, true));
-            appDao.insertarReceta(new Receta("Pizza Barbacoa", "file:///android_asset/pizzabbq.png", 60, 6, false, false));
-            appDao.insertarReceta(new Receta("Bizcocho para celíacos", "file:///android_asset/bizcocho.png", 90, 4, false, true));
-            appDao.insertarReceta(new Receta("Tarta de Queso", "file:///android_asset/cheesecake.png", 100, 6, false, false));
-            appDao.insertarReceta(new Receta("Cocido Madrileño", "file:///android_asset/cosidito.png", 120, 8, false, false));
-            appDao.insertarReceta(new Receta("Entrecot de Ternera", "file:///android_asset/entrecot.png", 15, 3, false, false));
-            appDao.insertarReceta(new Receta("Ramen Miso", "file:///android_asset/ramenmiso.png", 120, 4, false, false));
-            appDao.insertarReceta(new Receta("Tortilla de Espinacas", "file:///android_asset/tortilla.png", 20, 4, false, true));
-            appDao.insertarReceta(new Receta("Sandwich Mixto", "file:///android_asset/bikini.png", 5, 2, false, false));
-            appDao.insertarReceta(new Receta("Macarrones a la Carbonara", "file:///android_asset/carbonara.png", 30, 4, false, true));
-            appDao.insertarReceta(new Receta("Fideos Yakisoba con pollo", "file:///android_asset/yakisoba.png", 25, 5, false, false));
-            appDao.insertarReceta(new Receta("Katsudon", "file:///android_asset/katsudon.png", 45, 4, false, true));
-            appDao.insertarReceta(new Receta("Sushi de atún", "file:///android_asset/sushi.png", 40, 10, false, true));
+            appDao.insertarReceta(new Receta("Espaguetis a la Boloñesa", "file:///android_asset/espagueti.png", 30, 3, false, false, Strings.ingredientes, Strings.espaguetis));
+            appDao.insertarReceta(new Receta("Perrito Caliente", "file:///android_asset/hotdog.png", 10, 2, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Mochis de Arroz", "file:///android_asset/mochi.png", 70, 4, true, true, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Pepinos con ajo", "file:///android_asset/pepinajo.png", 20, 2, true, true, Strings.ingredientes, Strings.pepinajo));
+            appDao.insertarReceta(new Receta("Pizza Barbacoa", "file:///android_asset/pizzabbq.png", 60, 6, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Bizcocho para celíacos", "file:///android_asset/bizcocho.png", 90, 4, false, true, Strings.ingredientes, Strings.bizcocho));
+            appDao.insertarReceta(new Receta("Tarta de Queso", "file:///android_asset/cheesecake.png", 100, 6, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Cocido Madrileño", "file:///android_asset/cosidito.png", 120, 8, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Entrecot de Ternera", "file:///android_asset/entrecot.png", 15, 3, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Ramen Miso", "file:///android_asset/ramenmiso.png", 120, 4, false, false, Strings.ingredientes, Strings.ramen));
+            appDao.insertarReceta(new Receta("Tortilla de Espinacas", "file:///android_asset/tortilla.png", 20, 4, false, true, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Sandwich Mixto", "file:///android_asset/bikini.png", 5, 2, false, false, Strings.ingredientes, Strings.bikini));
+            appDao.insertarReceta(new Receta("Macarrones a la Carbonara", "file:///android_asset/carbonara.png", 30, 4, false, true, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Fideos Yakisoba con pollo", "file:///android_asset/yakisoba.png", 25, 5, false, false, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Katsudon", "file:///android_asset/katsudon.png", 45, 4, false, true, Strings.ingredientes, Strings.generico));
+            appDao.insertarReceta(new Receta("Sushi de atún", "file:///android_asset/sushi.png", 40, 10, false, true, Strings.ingredientes, Strings.generico));
         });
     }
 

@@ -5,6 +5,7 @@
     app:recyclerview_fling_animation_size=".7"
     app:recyclerview_overscroll_animation_size=".7"
     app:allow_item_swipe="false"
+    android:paddingBottom="20dp"
     app:allow_drag_reorder="true"
     xmlns:tools="http://schemas.android.com/tools" android:layout_height="wrap_content" android:layout_width="match_parent">
 
@@ -58,15 +59,17 @@
         app:layout_constraintTop_toTopOf="@id/imageView4" />
 
     <per.wsj.library.AndRatingBar
-        app:bgDrawable="@drawable/corazonoff"
-        app:starDrawable="@drawable/corazonon"
-        android:layout_width="270dp"
-        android:layout_height="40dp"
-        android:layout_margin="20dp"
-        android:numStars="5"
         android:id="@+id/ratingBar"
+        android:layout_width="200dp"
+        android:rating="3.5"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:numStars="5"
+        app:bgDrawable="@drawable/corazonoff"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        app:starDrawable="@drawable/corazonon" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -93,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="11dp"
         android:text="75 minutos"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/viewcrono"
@@ -104,7 +107,7 @@
         android:layout_width="26dp"
         android:layout_height="26dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/ic_person"
         app:layout_constraintStart_toEndOf="@+id/minutes"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
@@ -115,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="11dp"
         android:text="4 personas"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/people"
@@ -144,11 +147,12 @@
         <per.wsj.library.AndRatingBar
             app:bgDrawable="@drawable/ic_ollaoff"
             app:starDrawable="@drawable/ic_ollaon"
-            android:layout_width="270dp"
-            android:layout_height="40dp"
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:rating="2"
             android:id="@+id/ratingBar2"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:numStars="5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/dificultadtext"
@@ -168,18 +172,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
-    <ListView
+    <TextView
         android:id="@+id/ingredientList"
         android:layout_width="match_parent"
+        android:text="@string/xex"
+        style="@style/textStyle"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="15dp"
+        android:layout_margin="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ingtext">
 
 <!--        ingredientes-->
 
-    </ListView>
+    </TextView>
 
     <TextView
         android:id="@+id/stepstext"
@@ -193,18 +199,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ingredientList" />
 
-    <ListView
+    <TextView
         android:id="@+id/stepsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="15dp"
+        style="@style/textStyle"
+        android:text="@string/xex"
+        android:layout_margin="27dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/stepstext">
 
         <!--        ingredientes-->
 
-    </ListView>
+    </TextView>
 
     <View
         android:id="@+id/minipic"
@@ -218,6 +226,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintStart_toEndOf="@id/minipic"
         app:layout_constraintTop_toBottomOf="@id/stepsList"
         android:text="@string/op"/>
@@ -228,10 +237,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         android:text="\@usuario"
         android:textColor="@color/teal_700"
         app:layout_constraintStart_toEndOf="@id/recetade"
-        app:layout_constraintTop_toBottomOf="@id/stepsList" />
+        app:layout_constraintTop_toBottomOf="@id/stepsList"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gotouser" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

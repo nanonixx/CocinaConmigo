@@ -41,6 +41,9 @@ public class RecetaFragment extends Fragment {
             binding.minutes.setText(String.valueOf(receta.tiempo)+" minutos");
             binding.numofpeople.setText(String.valueOf(receta.personas)+" personas");
 
+            binding.ingredientList.setText(receta.ingredientes);
+            binding.stepsList.setText(receta.pasos);
+
             Glide.with(requireView())
                     .load(receta.imagen)
                     .fitCenter()

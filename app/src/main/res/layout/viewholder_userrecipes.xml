@@ -25,13 +25,14 @@
         app:layout_constraintLeft_toRightOf="@id/recetaPicture"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RatingBar
+    <per.wsj.library.AndRatingBar
         android:id="@+id/rating"
         style="@style/Widget.AppCompat.RatingBar.Indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="25dp"
         android:layout_marginStart="10dp"
-
+        app:bgDrawable="@drawable/ic_ollaoff"
+        app:starDrawable="@drawable/ic_ollaon"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/recetaPicture"
         app:layout_constraintTop_toBottomOf="@+id/nombreReceta" />
@@ -41,7 +42,7 @@
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
 
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/ic_veg_cel"
         android:contentDescription="@string/xex"
         app:layout_constraintStart_toEndOf="@+id/rating"

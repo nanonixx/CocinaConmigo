@@ -79,18 +79,20 @@
         tools:layout_editor_absoluteX="50dp" />
 
     <TextView
-        android:id="@+id/diff"
+         android:id="@+id/diff"
         style="@style/textStyle"
         android:text="@string/diff"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cuadrito2" />
 
-    <RatingBar
+    <per.wsj.library.AndRatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:numStars="5"
+        app:bgDrawable="@drawable/ic_ollaoff"
+        app:starDrawable="@drawable/ic_ollaon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/diff" />
@@ -271,18 +273,42 @@
         app:layout_constraintStart_toEndOf="@id/checkBoxGluten"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxVegan" />
 
-    <Button
-        android:id="@+id/searchButton"
-        android:elevation="5dp"
+    <com.andexert.library.RippleView
+        android:id="@+id/more"
         android:layout_width="312dp"
         android:layout_height="45dp"
-        android:background="@drawable/ic_button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="60dp"
-        android:text="@string/search"
+        android:layout_marginTop="20dp"
+        app:rv_rippleDuration="1000"
+        app:rv_type="doubleRipple"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/checkBoxGluten" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxGluten">
+
+        <Button
+            android:id="@+id/searchButton"
+            android:elevation="5dp"
+            android:layout_width="312dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkBoxGluten" />
+
+    </com.andexert.library.RippleView>
+
+<!--    <Button-->
+<!--        android:id="@+id/searchButton"-->
+<!--        android:elevation="5dp"-->
+<!--        android:layout_width="312dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:background="@drawable/ic_button2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginBottom="60dp"-->
+<!--        android:text="@string/search"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/checkBoxGluten" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

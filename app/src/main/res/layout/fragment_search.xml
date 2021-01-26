@@ -32,6 +32,7 @@
         android:layout_height="35dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
+        android:hint="@string/keywords"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:paddingLeft="15dp"
@@ -72,7 +73,7 @@
         android:layout_marginRight="24dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-
+        android:hint="@string/ing"
         android:paddingLeft="15dp"
         android:background="@drawable/ic_textbar"
         android:strokeColor="#D6D6D6"
@@ -143,6 +144,7 @@
             android:id="@+id/editnum"
             android:inputType="number"
             android:gravity="center"
+            android:hint="0"
             android:background="@drawable/ic_textbar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/menos"
@@ -205,6 +207,7 @@
             android:layout_marginLeft="10dp"
             android:id="@+id/editnum2"
             android:inputType="number"
+            android:hint="0"
             android:background="@drawable/ic_textbar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/menos2"
@@ -214,6 +217,7 @@
         <View
             android:id="@+id/mas2"
             android:layout_width="30dp"
+
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/ic_mas"

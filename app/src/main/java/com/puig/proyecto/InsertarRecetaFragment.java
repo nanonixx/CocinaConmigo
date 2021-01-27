@@ -118,6 +118,10 @@ public class InsertarRecetaFragment extends Fragment {
             if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())-1));
         });
 
+        PushDownAnim.setPushDownAnimTo(binding.deleteButton).setOnClickListener(v -> {
+
+        });
+
 
     }
 

@@ -80,7 +80,6 @@ public class InsertarRecetaFragment extends Fragment {
             boolean isVegan = vegan.isChecked();
             boolean isGlutenFree = gluten.isChecked();
 
-
            recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo, personas);
            navController.popBackStack();
            recetasViewModel.establecerImagenSeleccionada(null);

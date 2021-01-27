@@ -54,6 +54,8 @@ public class UserFragment extends Fragment {
                 recetasAdapter.setRecetaList(recetas);
             }
         });
+
+        Glide.with(requireView()).load("file:///android_asset/user.png").into(binding.imageView3);
     }
 
 

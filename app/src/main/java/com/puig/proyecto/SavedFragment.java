@@ -79,6 +79,15 @@ public class SavedFragment extends Fragment {
                 recetasViewModel.seleccionar(receta);
                 navController.navigate(R.id.recetaFragment);
             });
+
+            holder.binding.delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EliminarOverlay eliminarOverlay = new EliminarOverlay();
+                    eliminarOverlay.show(getFragmentManager(), " r");
+                }
+
+            });
         }
 
         @Override

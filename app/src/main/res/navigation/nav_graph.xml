@@ -46,6 +46,9 @@
         <action
             android:id="@+id/action_accountFragment_to_draftsFragment"
             app:destination="@id/draftsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_misRecetasFragment"
+            app:destination="@id/misRecetasFragment" />
     </fragment>
     <fragment
         android:id="@+id/userFragment"
@@ -71,6 +74,11 @@
         android:name="com.puig.proyecto.ResultadosFragment"
         android:label="fragment_resultados"
         tools:layout="@layout/fragment_resultados" />
+    <fragment
+        android:id="@+id/misRecetasFragment"
+        android:name="com.puig.proyecto.MisRecetasFragment"
+        android:label="fragment_mis_recetas"
+        tools:layout="@layout/fragment_mis_recetas" />
 
 
 </navigation>

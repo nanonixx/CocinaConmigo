@@ -16,33 +16,35 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.puig.proyecto.databinding.FragmentDraftsBinding;
-import com.puig.proyecto.databinding.ViewholderBorradoresBinding;
+import com.puig.proyecto.databinding.FragmentMisRecetasBinding;
+import com.puig.proyecto.databinding.ViewholderMisrecetasBinding;
 
 import java.util.List;
 
 
-public class DraftsFragment extends Fragment {
+public class MisRecetasFragment extends Fragment {
+
+
 
     private RecetasViewModel recetasViewModel;
-    private FragmentDraftsBinding binding;
+    private FragmentMisRecetasBinding binding;
 
     NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle DraftsInstanceState) {
-        return (binding = FragmentDraftsBinding.inflate(inflater, container, false)).getRoot();
+                             Bundle MisRecetasInstanceState) {
+        return (binding = FragmentMisRecetasBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle DraftsInstanceState) {
-        super.onViewCreated(view, DraftsInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle MisRecetasInstanceState) {
+        super.onViewCreated(view, MisRecetasInstanceState);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
         navController = Navigation.findNavController(view);
 
-        RecetasAdapter recetasAdapter = new RecetasAdapter();
-        binding.recyclerview.setAdapter(recetasAdapter);
+        MisRecetasFragment.RecetasAdapter recetasAdapter = new MisRecetasFragment.RecetasAdapter();
+        binding.recycler.setAdapter(recetasAdapter);
 
         recetasViewModel.todoRecetas().observe(getViewLifecycleOwner(), new Observer<List<Receta>>() {
             @Override
@@ -57,18 +59,18 @@ public class DraftsFragment extends Fragment {
 
     }
 
-    class RecetasAdapter extends RecyclerView.Adapter<BorradoresViewHolder> {
+    class RecetasAdapter extends RecyclerView.Adapter<MisRecetasFragment.MisrecetasViewHolder> {
 
         List<Receta> recetaList;
 
         @NonNull
         @Override
-        public BorradoresViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new BorradoresViewHolder(ViewholderBorradoresBinding.inflate(getLayoutInflater(), parent, false));
+        public MisRecetasFragment.MisrecetasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new MisRecetasFragment.MisrecetasViewHolder(ViewholderMisrecetasBinding.inflate(getLayoutInflater(), parent, false));
         }
 
         @Override
-        public void onBindViewHolder(@NonNull BorradoresViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MisRecetasFragment.MisrecetasViewHolder holder, int position) {
             Receta receta = recetaList.get(position);
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
@@ -100,16 +102,15 @@ public class DraftsFragment extends Fragment {
         }
     }
 
-    static class BorradoresViewHolder extends RecyclerView.ViewHolder {
-        ViewholderBorradoresBinding binding;
+    static class MisrecetasViewHolder extends RecyclerView.ViewHolder {
+        ViewholderMisrecetasBinding binding;
 
-        public BorradoresViewHolder(@NonNull ViewholderBorradoresBinding binding) {
+        public MisrecetasViewHolder(@NonNull ViewholderMisrecetasBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
 
 
     }
-
-
+    
 }

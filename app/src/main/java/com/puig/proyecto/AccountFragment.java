@@ -2,6 +2,8 @@ package com.puig.proyecto;
 
 import android.os.Bundle;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -39,13 +41,43 @@ public class AccountFragment extends Fragment {
         navController = Navigation.findNavController(view);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
 
+        binding.editPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lanzadorGaleria.launch("image/*");
+            }
+        });
+
         binding.gotoDrafts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_accountFragment_to_draftsFragment);
             }
 
-        });
-    }
 
+        });
+
+        binding.myRecipes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_accountFragment_to_misRecetasFragment);
+            }
+
+        });
+
+                binding.logout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        MyDialogFragment myDialogFragment = new MyDialogFragment();
+                        myDialogFragment.show(getFragmentManager(), " r");
+                    }
+
+                }
+
+
+        );
+    }
+    private final ActivityResultLauncher<String> lanzadorGaleria =
+            registerForActivityResult(new ActivityResultContracts.GetContent(), uri ->
+                    recetasViewModel.establecerImagenSeleccionada(uri));
 }

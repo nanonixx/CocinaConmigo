@@ -72,13 +72,26 @@
         app:starDrawable="@drawable/corazonon" />
 
     <TextView
+        android:id="@+id/valorar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="34dp"
-        android:textStyle="italic"
-        android:textColor="@color/teal_700"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="29dp"
         android:text="@string/rate"
+        android:textColor="@color/teal_700"
+        android:textSize="17sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toEndOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/imageView4" />
+
+    <ImageView
+        android:id="@+id/vegcel"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/valorar"
         app:layout_constraintTop_toBottomOf="@id/imageView4" />
 
     <View

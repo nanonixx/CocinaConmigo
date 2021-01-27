@@ -85,9 +85,13 @@
     <string name="logout2">¿Seguro que quieres cerrar sesión?</string>
     <string name="delete">¿Seguro de que quieres eliminar esta receta?</string>
 
-
-
+    <string name="rateRecipe">Valora esta receta</string>
+    <string name="toRate">Valorar</string>
     <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+
+
 
 
 </resources>

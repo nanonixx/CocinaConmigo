@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentMisRecetasBinding;
 import com.puig.proyecto.databinding.ViewholderMisrecetasBinding;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import java.util.List;
 
@@ -54,9 +56,6 @@ public class MisRecetasFragment extends Fragment {
         });
 
 
-
-
-
     }
 
     class RecetasAdapter extends RecyclerView.Adapter<MisRecetasFragment.MisrecetasViewHolder> {
@@ -81,7 +80,9 @@ public class MisRecetasFragment extends Fragment {
                 navController.navigate(R.id.recetaFragment);
             });
 
-            holder.binding.delete.setOnClickListener(new View.OnClickListener() {
+            PushDownAnim.setPushDownAnimTo(holder.binding.share).setOnClickListener(v -> {  });
+
+            PushDownAnim.setPushDownAnimTo(holder.binding.delete).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     EliminarOverlay eliminarOverlay = new EliminarOverlay();

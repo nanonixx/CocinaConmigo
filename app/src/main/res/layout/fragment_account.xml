@@ -22,14 +22,14 @@
             android:layout_width="84dp"
             android:layout_height="84dp"
             android:background="@drawable/ic_baseline_account"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/xex"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="@string/xex" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             style="@style/textStyle"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="12dp"
             android:id="@+id/userfullname"
             app:layout_constraintLeft_toRightOf="@id/userPic"
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="13sp"
+            android:layout_marginLeft="10dp"
             app:layout_constraintLeft_toRightOf="@id/userPic"
             app:layout_constraintTop_toBottomOf="@id/userfullname"
             android:text="\@nhid7597"/>
@@ -51,6 +52,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
+            android:layout_marginLeft="10dp"
+
+            android:textSize="14sp"
             android:textColor="#1A8F88"
             app:layout_constraintLeft_toRightOf="@id/userPic"
             app:layout_constraintTop_toBottomOf="@id/username"

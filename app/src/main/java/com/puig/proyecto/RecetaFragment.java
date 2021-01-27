@@ -44,6 +44,10 @@ public class RecetaFragment extends Fragment {
             binding.ingredientList.setText(receta.ingredientes);
             binding.stepsList.setText(receta.pasos);
 
+            if (receta.celiaco) binding.vegcel.setBackgroundResource(R.drawable.ic_gluten_free);
+            if (receta.vegano) binding.vegcel.setBackgroundResource(R.drawable.ic_vegan);
+            if (receta.vegano && receta.celiaco) binding.vegcel.setBackgroundResource(R.drawable.ic_veg_cel);
+
             Glide.with(requireView())
                     .load(receta.imagen)
                     .fitCenter()
@@ -57,6 +61,16 @@ public class RecetaFragment extends Fragment {
                 navController.navigate(R.id.action_recetaFragment_to_userFragment);
             }
         });
+
+        binding.valorar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RatingOverlay ratingOverlay = new RatingOverlay();
+                ratingOverlay.show(getFragmentManager(), " r");
+            }
+
+        });
+
 
 
 

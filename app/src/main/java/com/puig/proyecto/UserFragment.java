@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -77,6 +78,13 @@ public class UserFragment extends Fragment {
                 holder.binding.minutes.setText(String.valueOf(receta.tiempo)+"'");
                 holder.binding.numofpeople.setText(String.valueOf(receta.personas)+"p");
                 Glide.with(requireView()).load(receta.imagen).into(holder.binding.recetaPicture);
+
+                if (receta.celiaco) holder.binding.vegcel.setImageResource(R.drawable.ic_gluten_free);
+                if (receta.vegano) holder.binding.vegcel.setImageResource(R.drawable.ic_vegan);
+                if (receta.vegano && receta.celiaco) holder.binding.vegcel.setImageResource(R.drawable.ic_veg_cel);
+
+
+
 
                 holder.binding.recetaPicture.setOnClickListener(v -> {
                     recetasViewModel.seleccionar(receta);

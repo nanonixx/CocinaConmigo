@@ -65,6 +65,22 @@ public class SearchFragment extends Fragment {
             }
         });
 
+        PushDownAnim.setPushDownAnimTo(binding.mas).setOnClickListener(v -> {
+            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())+1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.menos).setOnClickListener(v -> {
+            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())-1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.mas2).setOnClickListener(v -> {
+            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())+1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.menos2).setOnClickListener(v -> {
+            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())-1));
+        });
+
 
     }
 }

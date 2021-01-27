@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -14,9 +15,12 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentAccountBinding;
 import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 
 public class AccountFragment extends Fragment {
@@ -24,6 +28,7 @@ public class AccountFragment extends Fragment {
     private FragmentAccountBinding binding;
     private NavController navController;
     private RecetasViewModel recetasViewModel;
+    private Uri imagenSeleccionada;
 
     public AccountFragment() {
     }
@@ -41,23 +46,31 @@ public class AccountFragment extends Fragment {
         navController = Navigation.findNavController(view);
         recetasViewModel = new ViewModelProvider(requireActivity()).get(RecetasViewModel.class);
 
-        binding.editPhoto.setOnClickListener(new View.OnClickListener() {
+        recetasViewModel.imagenSeleccionada.observe(getViewLifecycleOwner(), uri -> {
+            if (uri != null) {
+                imagenSeleccionada = uri;
+                Glide.with(requireView())
+                        .load(uri)
+                        .circleCrop()
+                        .into(binding.userPic);
+            }
+        });
+
+        PushDownAnim.setPushDownAnimTo(view.findViewById(R.id.editPhoto)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lanzadorGaleria.launch("image/*");
             }
         });
 
-        binding.gotoDrafts.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(view.findViewById(R.id.gotoDrafts)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_accountFragment_to_draftsFragment);
             }
-
-
         });
 
-        binding.myRecipes.setOnClickListener(new View.OnClickListener() {
+        PushDownAnim.setPushDownAnimTo(view.findViewById(R.id.myRecipes)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.action_accountFragment_to_misRecetasFragment);
@@ -65,17 +78,15 @@ public class AccountFragment extends Fragment {
 
         });
 
-                binding.logout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        MyDialogFragment myDialogFragment = new MyDialogFragment();
-                        myDialogFragment.show(getFragmentManager(), " r");
-                    }
+        PushDownAnim.setPushDownAnimTo(view.findViewById(R.id.logout)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDialogFragment myDialogFragment = new MyDialogFragment();
+                myDialogFragment.show(getFragmentManager(), " r");
+            }
 
-                }
+        });
 
-
-        );
     }
     private final ActivityResultLauncher<String> lanzadorGaleria =
             registerForActivityResult(new ActivityResultContracts.GetContent(), uri ->

@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentDraftsBinding;
 import com.puig.proyecto.databinding.ViewholderBorradoresBinding;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import java.util.List;
 
@@ -51,10 +53,6 @@ public class DraftsFragment extends Fragment {
             }
         });
 
-
-
-
-
     }
 
     class RecetasAdapter extends RecyclerView.Adapter<BorradoresViewHolder> {
@@ -79,7 +77,9 @@ public class DraftsFragment extends Fragment {
                 navController.navigate(R.id.recetaFragment);
             });
 
-            holder.binding.delete.setOnClickListener(new View.OnClickListener() {
+            PushDownAnim.setPushDownAnimTo(holder.binding.share).setOnClickListener(v -> {  });
+
+            PushDownAnim.setPushDownAnimTo(holder.binding.delete).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     EliminarOverlay eliminarOverlay = new EliminarOverlay();

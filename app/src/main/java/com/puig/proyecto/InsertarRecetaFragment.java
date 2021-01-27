@@ -16,11 +16,13 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentInsertarRecetaBinding;
 import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
+import com.thekhaeng.pushdownanim.PushDownAnim;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
@@ -69,10 +71,21 @@ public class InsertarRecetaFragment extends Fragment {
             }
         });
 
-        binding.insertar.setOnClickListener(v -> {
+        Button button = view.findViewById(R.id.guardar);
+        PushDownAnim.setPushDownAnimTo( button).setOnClickListener(v -> {
+
+        });
+
+        Button button2 = view.findViewById(R.id.insertar);
+        PushDownAnim.setPushDownAnimTo(button2).setOnClickListener(v -> {
             String nombre = binding.nombre.getText().toString();
-            int tiempo = Integer.parseInt(binding.editnum.getText().toString());
-            int personas = Integer.parseInt(binding.editnum2.getText().toString());
+            int tiempo = 10;
+            int personas = 4;
+
+            if (!(binding.editnum.getText().toString().equals(""))) tiempo = Integer.parseInt(binding.editnum.getText().toString());
+            if (!(binding.editnum2.getText().toString().equals(""))) personas = Integer.parseInt(binding.editnum2.getText().toString());
+
+            String pasos = binding.pasosAseguir.getText().toString();
 
             CheckBox vegan = ((CheckBox) view.findViewById(R.id.checkBoxVegan) );
             CheckBox gluten = ((CheckBox) view.findViewById(R.id.checkBoxGluten) );
@@ -80,10 +93,29 @@ public class InsertarRecetaFragment extends Fragment {
             boolean isVegan = vegan.isChecked();
             boolean isGlutenFree = gluten.isChecked();
 
-           recetasViewModel.insertar(nombre, imagenSeleccionada.toString(), tiempo, personas);
+            String image = "file:///android_asset/noImageAvailable.png";
+            if (!(imagenSeleccionada == null)) image=imagenSeleccionada.toString();
+
+           recetasViewModel.insertar(nombre, image, tiempo, personas, isVegan, isGlutenFree, Strings.ingredientes, pasos);
            navController.popBackStack();
            recetasViewModel.establecerImagenSeleccionada(null);
 
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.mas).setOnClickListener(v -> {
+            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())+1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.menos).setOnClickListener(v -> {
+            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())-1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.mas2).setOnClickListener(v -> {
+            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())+1));
+        });
+
+        PushDownAnim.setPushDownAnimTo(binding.menos2).setOnClickListener(v -> {
+            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())-1));
         });
 
 

@@ -1,5 +1,6 @@
 package com.puig.proyecto;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -80,6 +81,16 @@ public class SavedFragment extends Fragment {
                 navController.navigate(R.id.recetaFragment);
             });
 
+            holder.binding.share.setOnClickListener(v -> {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Te envío la recetinga: http://bitly.com/98K8eH");
+                sendIntent.setType("text/plain");
+
+                Intent shareIntent = Intent.createChooser(sendIntent, null);
+                startActivity(shareIntent);
+            });
+
             holder.binding.delete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -108,6 +119,8 @@ public class SavedFragment extends Fragment {
             super(binding.getRoot());
             this.binding = binding;
         }
+
+
 
 
     }

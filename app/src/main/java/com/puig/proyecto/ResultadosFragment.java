@@ -1,6 +1,5 @@
 package com.puig.proyecto;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,7 +17,6 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentResultadosBinding;
-import com.puig.proyecto.databinding.ViewholderGuadadosBinding;
 import com.puig.proyecto.databinding.ViewholderUserrecipesBinding;
 
 import java.util.List;

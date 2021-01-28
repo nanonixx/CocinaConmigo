@@ -1,6 +1,7 @@
 package com.puig.proyecto;
 
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -8,12 +9,12 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,12 +22,7 @@ import android.widget.CheckBox;
 
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentInsertarRecetaBinding;
-import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.thekhaeng.pushdownanim.PushDownAnim;
-
-import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static androidx.core.content.ContextCompat.checkSelfPermission;
 
 
 public class InsertarRecetaFragment extends Fragment {
@@ -102,21 +98,97 @@ public class InsertarRecetaFragment extends Fragment {
 
         });
 
-        PushDownAnim.setPushDownAnimTo(binding.mas).setOnClickListener(v -> {
-            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())+1));
+        binding.mas.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+
+                        if(pressedUp == false){
+                            pressedUp = true;
+                            new mastiempo().execute();
+                        }
+                    break;
+                    case MotionEvent.ACTION_UP:
+
+                        pressedUp = false;
+
+                }
+                return true;
+            }
         });
 
-        PushDownAnim.setPushDownAnimTo(binding.menos).setOnClickListener(v -> {
-            if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())-1));
+
+        binding.menos.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+
+                        if(pressedUp == false){
+                            pressedUp = true;
+                            new menostiempo().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+
+                        pressedUp = false;
+
+                }
+                return true;
+            }
         });
 
-        PushDownAnim.setPushDownAnimTo(binding.mas2).setOnClickListener(v -> {
-            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())+1));
+        binding.mas2.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+
+                        if(pressedUp == false){
+                            pressedUp = true;
+                            new maspersonas().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+
+                        pressedUp = false;
+
+                }
+                return true;
+            }
         });
 
-        PushDownAnim.setPushDownAnimTo(binding.menos2).setOnClickListener(v -> {
-            if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())-1));
+
+        binding.menos2.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+
+                    case MotionEvent.ACTION_DOWN:
+
+                        if(pressedUp == false){
+                            pressedUp = true;
+                            new menospersonas().execute();
+                        }
+                        break;
+                    case MotionEvent.ACTION_UP:
+
+                        pressedUp = false;
+
+                }
+
+                return true;
+            }
         });
+
 
         PushDownAnim.setPushDownAnimTo(binding.deleteButton).setOnClickListener(v -> {
 
@@ -130,4 +202,69 @@ public class InsertarRecetaFragment extends Fragment {
             recetasViewModel.establecerImagenSeleccionada(uri));
             //Glide.with(requireView()).load(uri).into(binding.previsualizarFoto));
 
+    boolean pressedUp = false;
+
+    class mastiempo extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            while(pressedUp) {
+                if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())+1));
+                try {
+                    Thread.sleep(150);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+    }
+
+    class menostiempo extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            while(pressedUp) {
+                if (!(binding.editnum.getText().toString().equals(""))) binding.editnum.setText(String.valueOf(Integer.parseInt(binding.editnum.getText().toString())-1));
+                try {
+                    Thread.sleep(150);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+    }
+
+    class maspersonas extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            while(pressedUp) {
+                if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())+1));
+                try {
+                    Thread.sleep(150);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+    }
+
+    class menospersonas extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            while(pressedUp) {
+                if (!(binding.editnum2.getText().toString().equals(""))) binding.editnum2.setText(String.valueOf(Integer.parseInt(binding.editnum2.getText().toString())-1));
+                try {
+                    Thread.sleep(150);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            return null;
+        }
+    }
 }

@@ -12,9 +12,6 @@
         android:roundIcon="@drawable/ic_appicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto">
-        <activity
-            android:name=".BottomActivity"
-            android:label="@string/title_activity_bottom" />
         <activity android:name=".MainActivity"
             android:windowSoftInputMode="adjustNothing"
             >

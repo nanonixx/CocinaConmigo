@@ -15,11 +15,9 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.bumptech.glide.Glide;
 import com.puig.proyecto.databinding.FragmentAccountBinding;
-import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.thekhaeng.pushdownanim.PushDownAnim;
 
 

@@ -109,18 +109,18 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="15dp"
         android:text="75 minutos"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/viewcrono"
         app:layout_constraintTop_toBottomOf="@id/ratingBar" />
 
     <ImageView
         android:id="@+id/people"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="11dp"
         android:background="@drawable/ic_person"
         app:layout_constraintStart_toEndOf="@+id/minutes"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
@@ -131,9 +131,9 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="15dp"
         android:text="4 personas"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/people"
         app:layout_constraintTop_toBottomOf="@id/ratingBar" />
 

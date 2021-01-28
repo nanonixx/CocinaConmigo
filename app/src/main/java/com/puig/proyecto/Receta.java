@@ -4,11 +4,6 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import com.puig.proyecto.ui.Ingredientes;
-
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 public class Receta {
 @PrimaryKey(autoGenerate = true)

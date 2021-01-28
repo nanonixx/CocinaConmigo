@@ -1,6 +1,5 @@
 package com.puig.proyecto;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,13 +11,11 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.puig.proyecto.databinding.FragmentListaRecetasBinding;
 import com.puig.proyecto.databinding.FragmentUserBinding;
 import com.puig.proyecto.databinding.ViewholderUserrecipesBinding;
 

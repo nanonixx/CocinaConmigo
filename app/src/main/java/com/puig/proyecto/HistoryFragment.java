@@ -51,8 +51,6 @@ public class HistoryFragment extends Fragment {
             }
         });
 
-        NavController navController = Navigation.findNavController(view);
-
     }
 
     class RecetasAdapter extends RecyclerView.Adapter<HistoryFragment.historialViewHolder> {
@@ -70,7 +68,8 @@ public class HistoryFragment extends Fragment {
             Receta receta = recetaList.get(position);
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
-            Glide.with(requireView()).load(receta.imagen).into(holder.binding.recetaPicture);
+            Glide.with(requireView()).load(receta.imagen)
+                    .centerCrop().into(holder.binding.recetaPicture);
 
             holder.itemView.setOnClickListener(v -> {
                 recetasViewModel.seleccionar(receta);

@@ -72,7 +72,8 @@ public class MisRecetasFragment extends Fragment {
             Receta receta = recetaList.get(position);
 
             holder.binding.nombreReceta.setText(receta.nombreReceta);
-            Glide.with(requireView()).load(receta.imagen).into(holder.binding.imagen);
+            Glide.with(requireView()).load(receta.imagen)
+                    .centerCrop().into(holder.binding.imagen);
 
             holder.binding.imagen.setOnClickListener(v -> {
                 recetasViewModel.seleccionar(receta);

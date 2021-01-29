@@ -63,6 +63,7 @@ public class InsertarRecetaFragment extends Fragment {
                 imagenSeleccionada = uri;
                 Glide.with(requireView())
                         .load(uri)
+                        .centerCrop()
                         .into(binding.previsualizarFoto);
             }
         });

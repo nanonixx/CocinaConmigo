@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cocina Conmigo</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_bottom">MainActivity</string>
 
     <string name="title_home">inicio</string>
     <string name="title_search">explorar</string>
@@ -15,7 +13,6 @@
     <string name="diff">Dificultad</string>
     <string name="maxtime">Tiempo máximo</string>
     <string name="comma">(Separado por comas)</string>
-    <string name="min">(min)</string>
     <string name="veg">Vegano</string>
     <string name="cel">Sin gluten</string>
     <string name="search">Buscar</string>
@@ -42,7 +39,6 @@
     <string name="notlogged">No has iniciado sesión</string>
     <string name="results">Resultados que coinciden con<br /> la búsqueda:</string>
     <string name="ps"> personas</string>
-    <string name="mn"> min</string>
     <string name="savetodrafts">Añadir a borradores</string>
     <string name="addrecipe">Subir receta</string>
     <string name="people">Número de personas</string>
@@ -71,7 +67,6 @@
     <string name="steps">Pasos a seguir</string>
     <string name="step">pasos a seguir</string>
     <string name="op">Receta de </string>
-    <string name="no">No</string>
     <string name="logout">Cerrar sesión</string>
     <string name="trending">Popular ahora mismo</string>
 
@@ -80,7 +75,6 @@
     <string name="protips">Consejos</string>
     <string name="addtip">Añadir consejo</string>
 
-    <string name="mins">(min)</string>
     <string name="logout2">¿Seguro que quieres cerrar sesión?</string>
     <string name="delete">¿Seguro de que quieres eliminar esta receta?</string>
 

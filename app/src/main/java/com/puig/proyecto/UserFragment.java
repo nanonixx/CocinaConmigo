@@ -28,8 +28,7 @@ public class UserFragment extends Fragment {
     private RecetasViewModel recetasViewModel;
     private NavController navController;
 
-    public UserFragment() {
-    }
+    public UserFragment(){ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +55,6 @@ public class UserFragment extends Fragment {
         Glide.with(requireView()).load("file:///android_asset/user.png").into(binding.imageView3);
     }
 
-
         class RecetasAdapter extends RecyclerView.Adapter<UserFragment.UserViewHolder> {
 
             List<Receta> recetaList;
@@ -80,9 +78,6 @@ public class UserFragment extends Fragment {
                 if (receta.celiaco) holder.binding.vegcel.setImageResource(R.drawable.ic_gluten_free);
                 if (receta.vegano) holder.binding.vegcel.setImageResource(R.drawable.ic_vegan);
                 if (receta.vegano && receta.celiaco) holder.binding.vegcel.setImageResource(R.drawable.ic_veg_cel);
-
-
-
 
                 holder.binding.recetaPicture.setOnClickListener(v -> {
                     recetasViewModel.seleccionar(receta);
